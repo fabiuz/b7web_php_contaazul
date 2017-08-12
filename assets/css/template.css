@@ -1,0 +1,254 @@
+body{
+    margin:0;
+    padding:0;
+    font-size:13px;
+    font-family:Arial;
+}
+.leftmenu{
+    width: 200px;
+    background-color: #1f232a;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.company_name{
+    height:100px;
+    line-height:100px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.container{
+    padding-left:200px;
+}
+.top{
+    height: 40px;
+    background-color: #232830;
+    color: #fff;
+    font-size:13px;
+}
+.top_right{
+    float:right;
+    height:40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.top_right a{
+    color:#fff;
+    text-decoration: none;
+}
+.menuarea{
+    color:white;
+}
+.menuarea ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.menuarea li {
+    height:40px;
+    line-height: 40px;
+    font-size:14px;
+    padding-left:30px;
+    background-size:15px 15px;
+    background-repeat:no-repeat;
+    background-position: 10px 11px;
+}
+.menuarea li:hover{
+    background-color: #000;
+}
+.menuarea li a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+.menuarea li:nth-child(1){
+    background-image:url('../images/home.png');
+}
+.menuarea li:nth-child(2){
+    background-image:url('../images/padlock.png');
+}
+.menuarea li:nth-child(3){
+    background-image:url('../images/user.png');
+}
+.menuarea li:nth-child(4){
+    background-image:url('../images/group.png')
+}
+.menuarea li:nth-child(5){
+    background-image:url('../images/inventory.png')
+}
+.menuarea li:nth-child(6){
+    background-image:url('../images/sales.png')
+}
+.area{
+    padding:15px;
+}
+.tabarea{
+    height:40px;
+}
+.tabitem{
+    float:left;
+    width:50%;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    border-bottom:1px solid #000;
+    background-color:#eee;
+    cursor:pointer;
+}
+.activetab{
+    border-bottom:1px solid #fff;
+    background-color:#fff;
+}
+.tabbody{
+    display:none;
+    padding-top: 20px;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+select,
+textarea{
+    width: 100%;
+    height: 30px;
+    font-size:13px;
+    outline:0;
+    padding-left:5px;
+    padding-right:5px;
+    margin-top:5px;
+}
+textarea{
+    height:100px;
+    border:1px solid #cccccc;
+}
+input[type=submit],
+button,
+.button {
+    border:0px;
+    background-color: #224074;
+    color:#fff;
+    line-height:40px;
+    height:40px;
+    border-radius:3px;
+    padding-left:20px;
+    padding-right: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    display:inline-block;
+}
+.button_small{
+    height:30px;
+    line-height:30px;
+}
+.button a{
+    color:#fff;
+    text-decoration: none;
+}
+table{
+    margin-top:10px;
+}
+table th {
+    height:40px;
+    line-height: 40px;
+    background-color: #ddd;
+    text-align: left;
+    padding-left:10px;
+    padding-right:10px;
+}
+table td{
+    height:40px;
+    line-height:40px;
+    background-color: #eee;
+    text-align: left;
+    padding-left:10px;
+    padding-right:10px;
+}
+.p_item{
+    height:30px;
+    line-height:30px;
+}
+.warn{
+    padding:15px;
+    background-color:#eee;
+    border:2px solid #cccccc;
+    border-radius:3px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.pagination{
+    margin-top:30px;
+    margin-bottom:30px;
+    align-items: center;
+    width:100%;
+    display:block;
+    align-content: center;
+}
+.pag_item{
+    widht:50px;
+    height:20px;
+    float:left;
+    border:1px solid #000;
+    margin-right:10px;
+    text-align: center;
+    line-height: 20px;
+}
+.pag_item a {
+    color:#000;
+    text-decoration: none;
+    padding-left:10px;
+    padding-right:10px;
+}
+.pag_ativo{
+    background-color: #224074;
+    color: #fff;
+}
+.pag_ativo a {
+    color: #fff;
+}
+#busca{
+    width:100px;
+    float:right;
+    background-image:url('../images/search.png');
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 5px ;
+    padding-left:25px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+.searchresults{
+    width:248px;
+    background-color:#fff;
+    position:absolute;
+    border: 1px solid #ccc;
+}
+.si a{
+    color:#000;
+    text-decoration: none;
+    display:block;
+}
+.si{
+    height:20px;
+    line-height:20px;
+    padding-left:15px;
+    cursor:pointer;
+}
+.si:hover{
+    background-color:#eee;
+}
+#client_name{
+    width:250px;
+}
+.client_add_button{
+    font-size:17px;
+    height:30px;
+    line-height:26px;
+    margin-top:5px;
+    margin-left:10px;
+}
+.p_quant{
+    width:40px !important
+}

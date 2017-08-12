@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /nova_estrutura_mvc/index.php?q=$1 [QSA,L]
+RewriteRule ^(.*)$ /contaazul/index.php/$1 [L]

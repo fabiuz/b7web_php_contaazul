@@ -1,0 +1,16 @@
+.div_footer{
+	position:fixed;
+	bottom: 0px;
+	border-radius:50px;
+	border-width: 1px;
+	width:100%;
+	text-align:center;
+	z-index: 999;
+	margin-top:50px;
+}
+
+.conteudo{
+	margin-bottom: 50px;
+	padding-bottom:50px;
+	height: 50%;
+}
