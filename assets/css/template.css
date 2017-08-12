@@ -82,6 +82,9 @@ body{
 .menuarea li:nth-child(6){
     background-image:url('../images/sales.png')
 }
+.menuarea li:nth-child(7){
+    background-image:url('../images/purchases.png')
+}
 .area{
     padding:15px;
 }
@@ -140,8 +143,16 @@ button,
     display:inline-block;
 }
 .button_small{
+    text-align:center;
+    width:75px;
     height:30px;
     line-height:30px;
+    padding:0px;
+}
+.button_small a{
+    margin:0px;
+    width:100%;
+    display:block;
 }
 .button a{
     color:#fff;
