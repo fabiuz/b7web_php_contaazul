@@ -37,12 +37,16 @@
                         ?>
                 </td>
                 <td width="160">
-                    <a href="<?php echo BASE_URL; ?>/inventory/edit/<?php echo $product['id']; ?>">
-                        <div class="button button_small">Editar</div>
-                    </a>
-                    <a href="<?php echo BASE_URL; ?>/inventory/delete/<?php echo $product['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
-                        <div class="button button_small">Excluir</div>
-                    </a>
+                    <div class="button button_small">
+                        <a href="<?php echo BASE_URL; ?>/inventory/edit/<?php echo $product['id']; ?>">Editar
+                        </a>
+                    </div>
+
+                    <div class="button button_small">
+                        <a href="<?php echo BASE_URL; ?>/inventory/delete/<?php echo $product['id']; ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
+                            Excluir
+                        </a>
+                    </div>
                 </td>
             </tr>
         <?php endforeach; ?>

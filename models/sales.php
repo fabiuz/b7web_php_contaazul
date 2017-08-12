@@ -68,7 +68,42 @@ class Sales extends model{
         $sql->bindValue(":total_price", $total_price);
         $sql->bindValue(":id", $id_sale);
         $sql->execute();
+    }
 
+    public function getInfo($id, $id_company){
+        $array = array();
+        $sql = $this->db->prepare("Select *, 
+            (Select clients.name from clients where clients.id = sales.id_client) as client_name
+            from sales 
+              where 
+                id = :id and 
+                id_company = :id_company");
 
+        $sql->bindValue(":id", $id);
+        $sql->bindValue(":id_company", $id_company);
+        $sql->Execute();
+
+        if($sql->rowCount() > 0){
+            $array['info'] = $sql->fetch();
+        }
+
+        $sql = $this->db->prepare("
+          Select sales_products.quant, 
+            sales_products.sale_price,
+            inventory.name           
+           from sales_products left join inventory
+          on inventory.id = sales_products.id_product
+            where 
+              sales_products.id_sale = :id_sale and 
+              sales_products.id_company = :id_company");
+        $sql->bindValue(":id_sale", $id);
+        $sql->bindValue(":id_company", $id_company);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $array['products'] = $sql->fetchAll();
+        }
+
+        return $array;
     }
 }

@@ -38,8 +38,11 @@
         <td>
             R$<?php echo number_format($sale_item['total_price'], 2, ',', ''); ?>
         </td>
-        <td>
-
+        <td width="160">
+            <div class="button button_small">
+                <a href="<?php echo BASE_URL; ?>/sales/edit/<?php echo $sale_item['id']; ?>">Editar
+                </a>
+            </div>
         </td>
     </tr>
 
