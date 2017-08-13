@@ -140,4 +140,18 @@ class inventory extends model {
         $this->setLog($id_produto, $id_company, $id_user, 'dwn');
 
     }
+
+    public function getInventoryFiltered($id_company){
+        $array = array();
+
+        $sql = $this->db->prepare("Select *, (min_quant - quant) as diferenca from inventory where quant < min_quant and id_company = :id_company order by diferenca desc");
+        $sql->bindValue(":id_company", $id_company);
+        $sql->execute();
+
+        if($sql->rowCount() > 0){
+            $array = $sql->fetchAll();
+        }
+
+        return $array;
+    }
 }
