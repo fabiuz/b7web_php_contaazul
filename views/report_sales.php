@@ -2,12 +2,12 @@
 <form method="GET" onsubmit="return openPopup(this)">
     <div class="report-grid-4">
         Nome do cliente:<br/>
-        <input type="text" name="cliente_name"/>
+        <input type="text" name="client_name"/>
     </div>
     <div class="report-grid-4">
         Período:<br/>
-        <input type="date" name="periodo1"/><br/>
-        <input type="date" name="periodo2"/><br/>
+        <input type="date" name="period1"/><br/>
+        <input type="date" name="period2"/><br/>
     </div>
     <div class="report-grid-4">
         Status da Venda:<br/>
