@@ -85,6 +85,9 @@ body{
 .menuarea li:nth-child(7){
     background-image:url('../images/purchases.png')
 }
+.menuarea li:nth-child(8){
+    background-image:url('../images/report_white.png')
+}
 .area{
     padding:15px;
 }
@@ -262,4 +265,25 @@ table td{
 }
 .p_quant{
     width:40px !important
+}
+.report_item{
+    width:150px;
+    height:140px;
+    background-color:#ccc;
+    float:left;
+    margin:20px;
+    padding:20px;
+    text-align:center;
+    font-size:17px;
+}
+.report_item a{
+    display:block;
+    color:#000;
+    text-decoration:none;
+}
+.report-grid-4{
+    width:25%;
+    height:150px;
+    float:left;
+    text-align:center;
 }
