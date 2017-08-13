@@ -71,7 +71,10 @@ class reportController extends controller
             '2' => 'Cancelado'
         );
 
+
         if ($u->hasPermission('report_view')) {
+
+
             $client_name = addslashes($_GET['client_name']);
             $period1 = addslashes($_GET['period1']);
             $period2 = addslashes($_GET['period2']);
@@ -82,11 +85,16 @@ class reportController extends controller
             $data['sales_list'] = $sales->getSalesFiltered($client_name, $period1, $period2, $status, $order, $u->getCompany());
             $data['filters'] = $_GET;
 
+            $this->loadLibrary('mpdf60/mpdf');
 
-
-
-
+            ob_start();
             $this->loadView("report_sales_pdf", $data);
+            $html = ob_get_contents();
+            ob_end_clean();
+
+            $mpdf = new mPDF();
+            $mpdf->WriteHTML($html);
+            $mpdf->Output();
 
         } else {
             header("Location: " . BASE_URL);

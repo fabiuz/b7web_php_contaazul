@@ -10,7 +10,7 @@
     }
     if(!empty($filters['period1']) && !empty($filters['period2'])){
         echo "No período: ".    date('d/m/Y', strtotime($filters['period1'])). " a ".
-                                date('d/m/Y', strtotime($filters['period1'])). "<br/>";
+                                date('d/m/Y', strtotime($filters['period2'])). "<br/>";
     }
     if($filters['status'] != ''){
         echo "Filtrado com status: ". $status[$filters['status']];
